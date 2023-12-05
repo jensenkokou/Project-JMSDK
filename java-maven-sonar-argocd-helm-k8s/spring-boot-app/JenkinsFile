@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://http://35.88.148.238/9000" # Update to new SonarQube Public IP
+        SONAR_URL = "http://http://35.88.148.238/9000"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
